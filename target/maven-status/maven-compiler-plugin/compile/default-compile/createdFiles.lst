@@ -1,0 +1,4 @@
+br/com/metasix/mvcube/MvccubeApplication.class
+br/com/metasix/mvcube/entity/Pessoa.class
+br/com/metasix/mvcube/entity/Chamado.class
+br/com/metasix/mvcube/security/SecurityConfiguration.class

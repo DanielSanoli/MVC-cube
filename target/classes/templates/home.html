@@ -1,0 +1,12 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+	</head>
+	<body>
+		
+		<h1>Bem vindo ao MVC-Cube</h1>
+        <a onclick="document.querySelector('#form-login').submit()" class="text-light" href="#">sair</a>
+        <form id="form-login" th:action="@{/logout}" method="post"></form>
+	</body>
+</html>
+
