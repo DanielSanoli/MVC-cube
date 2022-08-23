@@ -22,7 +22,7 @@ public class UsuarioService {
 		Usuario existsUsuario = usuarioRepository.findByEmail(usuario.getEmail());
 
 		if (existsUsuario != null) {
-			throw new Error("Usuario already exists!");
+			throw new Error("Usuario já existe!");
 		}
 		
 		usuario.setSenha(passwordEncoder().encode(usuario.getSenha()));
