@@ -21,8 +21,11 @@ public class Usuario {
 	private String email;
 	private String senha;
 	private String cpf;
+	private String dataNascimento;
 	private String telefone;
 	private String logradouro;
+	private String cidade;
+	private String uf;
 	private Integer numero;
 	private String complemento;
 	private String bairro;
@@ -33,15 +36,18 @@ public class Usuario {
 	public Usuario() {
 	}
 	
-	public Usuario(Long id, String nomeCompleto, String email, String senha, String cpf, String telefone,
-			String logradouro, Integer numero, String complemento, String bairro, List<Role> roles) {
+	public Usuario(Long id, String nomeCompleto, String email, String senha, String cpf, String dataNascimento, String telefone,
+			String logradouro, String cidade, String uf, Integer numero, String complemento, String bairro, List<Role> roles) {
 		this.id = id;
 		this.nomeCompleto = nomeCompleto;
 		this.email = email;
 		this.senha = senha;
 		this.cpf = cpf;
+		this.dataNascimento = dataNascimento;
 		this.telefone = telefone;
 		this.logradouro = logradouro;
+		this.cidade = cidade;
+		this.uf = uf;
 		this.numero = numero;
 		this.complemento = complemento;
 		this.bairro = bairro;
@@ -88,6 +94,14 @@ public class Usuario {
 		this.cpf = cpf;
 	}
 	
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
 	public String getTelefone() {
 		return telefone;
 	}
@@ -103,7 +117,23 @@ public class Usuario {
 	public void setLogradouro(String logradouro) {
 		this.logradouro = logradouro;
 	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
 	
+	public String getUf() {
+		return uf;
+	}
+
+	public void setUf(String uf) {
+		this.uf = uf;
+	}
+
 	public Integer getNumero() {
 		return numero;
 	}
