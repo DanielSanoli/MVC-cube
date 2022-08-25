@@ -1,4 +1,15 @@
-br/com/metasix/mvcube/MvccubeApplication.class
-br/com/metasix/mvcube/entity/Pessoa.class
+br/com/metasix/mvcube/service/UsuarioService.class
+br/com/metasix/mvcube/entity/Usuario.class
 br/com/metasix/mvcube/entity/Chamado.class
+br/com/metasix/mvcube/entity/Role.class
+br/com/metasix/mvcube/controller/LoginController.class
+br/com/metasix/mvcube/controller/UsuarioController.class
+br/com/metasix/mvcube/dto/RequisicaoNovoUsuario.class
+br/com/metasix/mvcube/security/UsuarioDetails.class
+br/com/metasix/mvcube/MvccubeApplication.class
+br/com/metasix/mvcube/controller/HomeController.class
+br/com/metasix/mvcube/service/RoleService.class
+br/com/metasix/mvcube/security/ImplementsUserDetailsService.class
 br/com/metasix/mvcube/security/SecurityConfiguration.class
+br/com/metasix/mvcube/repository/UsuarioRepository.class
+br/com/metasix/mvcube/dto/RoleDTO.class

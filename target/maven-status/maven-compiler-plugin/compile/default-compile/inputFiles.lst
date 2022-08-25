@@ -1,4 +1,15 @@
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Pessoa.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/MvccubeApplication.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/service/UsuarioService.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/LoginController.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/security/ImplementsUserDetailsService.java
 /home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Chamado.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/security/UsuarioDetails.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Usuario.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/dto/RoleDTO.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/service/RoleService.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/MvccubeApplication.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Role.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/UsuarioController.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/HomeController.java
 /home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/security/SecurityConfiguration.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/repository/UsuarioRepository.java
+/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/dto/RequisicaoNovoUsuario.java
