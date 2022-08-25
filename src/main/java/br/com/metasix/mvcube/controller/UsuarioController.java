@@ -1,5 +1,7 @@
 package br.com.metasix.mvcube.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +10,13 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import br.com.metasix.mvcube.dto.RequisicaoNovoUsuario;
+import br.com.metasix.mvcube.dto.RoleDTO;
 import br.com.metasix.mvcube.entity.Usuario;
+import br.com.metasix.mvcube.repository.UsuarioRepository;
+import br.com.metasix.mvcube.service.RoleService;
 import br.com.metasix.mvcube.service.UsuarioService;
 
 @Controller
@@ -18,11 +24,22 @@ import br.com.metasix.mvcube.service.UsuarioService;
 public class UsuarioController {
 
 	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
+	@Autowired
 	private UsuarioService usuarioService;
 	
-	@GetMapping("form")
+	@Autowired
+	private RoleService roleService;
+	
+	@GetMapping("formUsuario")
 	public String form(RequisicaoNovoUsuario requisicao) {
 		return "usuario/cadastroUsuario";
+	}
+	
+	@GetMapping("formCidadao")
+	public String formCidadao(RequisicaoNovoUsuario requisicao) {
+		return "cidadao/cadastroCidadao";
 	}
 	
 	@PostMapping("cadastroUsuario")
@@ -35,7 +52,37 @@ public class UsuarioController {
 		Usuario usuario = requisicao.toUsuario();
 		
 		usuarioService.execute(usuario);
-		return "usuario/cadastroConcluido";
+		
+		RoleDTO roleDto = requisicao.toRole();
+		roleDto.setIdUsuario(usuario.getId());
+		roleService.execute(roleDto);
+		return "home";
 	}
+	
+	@PostMapping("cadastroCidadao")
+	public String cadastroCidadao(@Valid RequisicaoNovoUsuario requisicao, BindingResult result) {
+		
+		if(result.hasErrors()) {
+			return "cidadao/cadastroCidadao";
+		}
+		
+		Usuario usuario = requisicao.toUsuario();
+		
+		usuarioService.execute(usuario);
+		
+		RoleDTO roleDto = requisicao.toRole();
+		roleDto.setIdUsuario(usuario.getId());
+		
+		roleService.executeCidadao(roleDto);
+		return "login";
+	}
+	
+	@GetMapping("/list")
+    public ModelAndView userList() {
+        List<Usuario> usuarios = usuarioRepository.findAll();
+        ModelAndView mv = new ModelAndView("usuario/ListUsuarios");
+        mv.addObject("list", usuarios);
+        return mv;
+    }
 	
 }
