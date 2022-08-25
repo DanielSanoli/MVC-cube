@@ -9,7 +9,7 @@
 		<main>
 			<section class="container border border-2 mt-5">
 				<h2 class="mt-3">Complete seu cadastro</h2>
-				<form th:object="${requisicaoNovoUsuario}" action="cadastroUsuario" method="POST" class="row g-3">
+				<form th:object="${requisicaoNovoUsuario}" action="cadastroCidadao" method="POST" class="row g-3">
 				  	<div class="col-md-8">
 				    	<label for="nomeCompleto" class="form-label">Nome completo</label>
 				    	<input th:field="*{nomeCompleto}" th:errorclass="is-invalid" type="text" class="form-control">
@@ -24,41 +24,34 @@
 				    		Seu CPF é obrigatório.
 				    	</div>
 				  	</div>
-				  	<div class="col-md-5">
+				  	<div class="col-md-6">
 					    <label for="telefone" class="form-label">Telefone</label>
 					    <input th:field="*{telefone}" th:errorclass="is-invalid" type="text" class="form-control" maxlength="11">
 					    <div class="invalid-feedback" th:errors="*{telefone}">
 				    		Seu telefone é obrigatório.
 				    	</div>
 				  	</div>
-				  	<div class="col-md-5">
+				  	<div class="col-md-6">
 				    	<label for="email" class="form-label">Email</label>
 				    	<input th:field="*{email}" th:errorclass="is-invalid" type="email" class="form-control">
 				    	<div class="invalid-feedback" th:errors="*{email}">
 				    		Seu email é obrigatório.
 				    	</div>
 				  	</div>
-				  	<div class="col-md-2">
-					    <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-					    <input th:field="*{dataNascimento}" th:errorclass="is-invalid" type="date" class="form-control">
-					    <div class="invalid-feedback" th:errors="*{dataNascimento}">
-				    		Sua data de nascimento é obrigatória.
-				    	</div>
-				  	</div>
-				  	 <div class="col-md-8">
+				  	<div class="col-md-8">
 					    <label for="password" class="form-label">Senha</label>
 					    <input th:field="*{senha}" type="password" th:errorclass="is-invalid" class="form-control" maxlength="15">
 					    <div class="invalid-feedback" th:errors="*{senha}">
 				    		Sua senha é obrigatória.
 				    	</div>
   					</div>
-  					<div class="col-md-4">
-					    <label for="roles" class="form-label">Tipo de Usuário</label>
-					    <input th:field="*{roles}" type="text" th:errorclass="is-invalid" class="form-control" maxlength="1" placeholder="1- ADMIN e 2- CIDADAO">
-					    <div class="invalid-feedback" th:errors="*{roles}">
-				    		O tipo de usuário é obrigatório
+				  	<div class="col-md-4">
+					    <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+					    <input th:field="*{dataNascimento}" th:errorclass="is-invalid" type="date" class="form-control">
+					    <div class="invalid-feedback" th:errors="*{dataNascimento}">
+				    		Sua data de nascimento é obrigatória.
 				    	</div>
- 					 </div>
+				  	</div>
 				  	<div class="col-8">
 					    <label for="logradouro" class="form-label">Logradouro</label>
 					    <input th:field="*{logradouro}" th:errorclass="is-invalid" type="text" class="form-control">

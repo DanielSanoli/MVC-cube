@@ -1,11 +1,7 @@
 <html>
-	<head>
-	<meta charset="UTF-8">
-	 <a onclick="document.querySelector('#form-login').submit()" class="text-light" href="#">sair</a>
-     <form id="form-login" th:action="@{/logout}" method="post"></form>
-	</head>
+	<head th:replace="~{fragment :: head}"></head>
 	<body>
-		<h1>Bem vindo ao MVC-Cube</h1>
+		<div th:replace="~{fragment :: logo}"></div>
 	</body>
 </html>
 
