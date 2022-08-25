@@ -27,6 +27,4 @@ public class ImplementsUserDetailsService implements UserDetailsService{
 		return UsuarioDetails.create(existsUsuario);
 	}
 	
-	
-
 }

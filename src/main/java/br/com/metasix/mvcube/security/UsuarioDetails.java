@@ -13,6 +13,7 @@ import br.com.metasix.mvcube.entity.Usuario;
 
 public class UsuarioDetails implements UserDetails{
 
+	private static final long serialVersionUID = 1L;
 	private String email;
 	private String senha;
 	private Collection<? extends GrantedAuthority> authorities;
