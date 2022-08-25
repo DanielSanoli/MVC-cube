@@ -1,8 +1,9 @@
 package br.com.metasix.mvcube.dto;
 
+import java.util.List;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-
 import br.com.metasix.mvcube.entity.Usuario;
 
 public class RequisicaoNovoUsuario {
@@ -30,6 +31,7 @@ public class RequisicaoNovoUsuario {
 	private String cidade;
 	@NotBlank
 	private String uf;
+	private List<Long> roles;
 	
 	public String getNomeCompleto() {
 		return nomeCompleto;
@@ -103,6 +105,25 @@ public class RequisicaoNovoUsuario {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
+	
+	public List<Long> getRoles() {
+		return roles;
+	}
+	public void setRoles(List<Long> roles) {
+		this.roles = roles;
+	}
+	
+	public RoleDTO toRole() {
+		RoleDTO role = new RoleDTO();
+		role.setIdsRoles(roles);
+		return role;
+	}
+	
+//	public RoleCidadaoDTO toCidadaoRole() {
+//		RoleCidadaoDTO role = new RoleCidadaoDTO();
+//		role.setIdRole(Long.valueOf(2));
+//		return role;
+//	}
 	
 	public Usuario toUsuario() {
 		Usuario usuario = new Usuario();
