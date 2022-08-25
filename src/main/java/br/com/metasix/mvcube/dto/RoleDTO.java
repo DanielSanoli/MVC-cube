@@ -12,7 +12,7 @@ public class RoleDTO {
 		return idUsuario;
 	}
 
-	public void getIdUsuario(Long idUsuario) {
+	public void setIdUsuario(Long idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 
@@ -24,6 +24,4 @@ public class RoleDTO {
 		this.idsRoles = idsRoles;
 	}
 	 
-	 
-	
 }
