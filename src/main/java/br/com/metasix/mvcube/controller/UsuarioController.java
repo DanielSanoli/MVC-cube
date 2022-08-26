@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.metasix.mvcube.dto.RequisicaoNovoUsuario;
@@ -80,8 +81,21 @@ public class UsuarioController {
 	@GetMapping("/list")
     public ModelAndView userList() {
         List<Usuario> usuarios = usuarioRepository.findAll();
-        ModelAndView mv = new ModelAndView("usuario/ListUsuarios");
+        ModelAndView mv = new ModelAndView("usuario/listUsuarios");
         mv.addObject("list", usuarios);
+        return mv;
+    }
+	
+	@PostMapping("/findByName")
+    public ModelAndView findByName(@RequestParam("nomepesquisa") String nomepesquisa) {
+        List<Usuario> user = null;
+        if (nomepesquisa.equals("")) {
+            user = this.usuarioRepository.findAll();
+        } else {
+            user = this.usuarioRepository.findByName(nomepesquisa);
+        }
+        ModelAndView mv = new ModelAndView("user/userlist");
+        mv.addObject("list", user);
         return mv;
     }
 	
