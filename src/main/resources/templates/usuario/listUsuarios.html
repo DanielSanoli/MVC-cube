@@ -6,7 +6,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	  <body>
-	   <div th:replace="~{fragment :: logo}"></div>
         <section>
             <main>
             	<form action="/findByName" method="post"  class="d-flex  mt-4 col-md-5">
@@ -30,7 +29,7 @@
                             <td th:text="${lista.dataNascimento}"></td>
                             <td th:text="${lista.email}"></td>
                             <td th:text="${lista.telefone}"></td>                      
-                            <td><a th:href="@{userEdit/{userId}(userId = ${lista.id})}">Alterar</a></td>
+                            <td><a sec:authorize="hasRole('ADMIN')" th:href="@{usuarioEdit/{userId}(userId = ${lista.id})}">Alterar</a></td>
                         </tr>
                     </tbody>
                 </table>    

@@ -1,0 +1,69 @@
+<!DOCTYOPE html>
+<html>
+	<head th:replace="~{fragment :: head}"></head>
+	<body>
+		<main>
+			<section class="container border border-2 mt-5">
+				<h2 class="mt-3">Edite o usuário</h2>
+				<form th:object="${usuario}" th:action="@{/usuario/editUsuario/{id}(id = ${usuario.id})}" method="POST">
+					<div class="row">
+						<div class="col-md-6">
+					    	<label for="nomeCompleto" class="form-label">Nome completo</label>
+					    	<input th:field="*{nomeCompleto}" type="text" class="form-control">
+					  	</div>
+					  	<div class="col-md-6">
+						    <label for="cpf" class="form-label">CPF</label>
+						    <input th:field="*{cpf}" type="text" class="form-control" maxlength="11">
+				  		</div>
+				  		<div class="col-md-6">
+					    	<label for="telefone" class="form-label">Telefone</label>
+						    <input th:field="*{telefone}" type="text" class="form-control" maxlength="11">
+				  		</div>
+						<div class="col-md-6">
+					    	<label for="email" class="form-label">Email</label>
+					    	<input th:field="*{email}" type="email" class="form-control">
+					  	</div>
+					  	<div class="col-md-9">
+						    <label for="password" class="form-label">Senha</label>
+						    <input th:field="*{senha}" type="password" class="form-control" maxlength="15">
+	  					</div>
+	  					<div class="col-md-3 mt-5">
+						    <label for="roles" class="form-label">Tipo de Usuário</label>
+						    <select th:field="*{roles}">
+							  <option value="1">ADMIN</option>
+							  <option value="2">CIDADAO</option>
+							</select>
+	 					 </div>
+	 					 <div class="col-8">
+						    <label for="logradouro" class="form-label">Logradouro</label>
+						    <input th:field="*{logradouro}"type="text" class="form-control">
+					  	</div>
+					  	<div class="col-1">
+						    <label for="numero" class="form-label">Número</label>
+						    <input th:field="*{numero}"type="text" class="form-control" maxlength="4">
+					  	</div>
+					  	<div class="col-3">
+						    <label for="complemento" class="form-label">Complemento</label>
+						    <input th:field="*{complemento}" type="text" class="form-control">
+					  	</div>
+					  	<div class="col-6">
+						    <label for="bairro" class="form-label">Bairro</label>
+						    <input th:field="*{bairro}"type="text" class="form-control">
+					 	 </div>
+					 	 <div class="col-5">
+						    <label for="cidade" class="form-label">Cidade</label>
+						    <input th:field="*{cidade}" type="text" class="form-control">
+					 	 </div>
+					 	 <div class="col-1">
+						    <label for="uf" class="form-label">UF</label>
+						    <input th:field="*{uf}"type="text" class="form-control" maxlength="2">
+					 	 </div>
+						  <div class="col-12 mt-3">
+						    	<button type="submit" class="btn btn-primary">Salvar</button>
+						  </div>
+					</div>
+				</form>
+			</section>
+		</main>	
+	</body>
+</html>
