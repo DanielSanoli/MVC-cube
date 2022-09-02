@@ -119,12 +119,6 @@ public class RequisicaoNovoUsuario {
 		return role;
 	}
 	
-//	public RoleCidadaoDTO toCidadaoRole() {
-//		RoleCidadaoDTO role = new RoleCidadaoDTO();
-//		role.setIdRole(Long.valueOf(2));
-//		return role;
-//	}
-	
 	public Usuario toUsuario() {
 		Usuario usuario = new Usuario();
 		usuario.setNomeCompleto(nomeCompleto);

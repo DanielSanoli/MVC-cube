@@ -31,5 +31,14 @@ public class UsuarioService {
 
 		return createdUsuario;
 	}
+	
+	public Usuario edit(Usuario usuario) {
+
+		String encode = new BCryptPasswordEncoder().encode(usuario.getSenha());
+		usuario.setSenha(encode);
+		Usuario updateUsuario = usuarioRepository.save(usuario);
+
+		return updateUsuario;
+	}
 
 }
