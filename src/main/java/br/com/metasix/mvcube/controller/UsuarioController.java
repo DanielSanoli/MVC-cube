@@ -56,7 +56,7 @@ public class UsuarioController {
 	
 	@GetMapping("/list")
     public ModelAndView userList() {
-        List<Usuario> usuarios = usuarioRepository.findAll();
+        List<Usuario> usuarios = usuarioRepository.findAllOrderById();
         ModelAndView mv = new ModelAndView("usuario/listUsuarios");
         mv.addObject("list", usuarios);
         return mv;

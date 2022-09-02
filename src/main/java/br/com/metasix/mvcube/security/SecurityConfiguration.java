@@ -2,6 +2,7 @@ package br.com.metasix.mvcube.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -32,6 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http
 			.authorizeRequests()
 				.antMatchers("/usuario/formCidadao").permitAll()
+				.antMatchers(HttpMethod.GET, "/usuario/editUsuario").hasRole("ADMIN")
 				.anyRequest().authenticated()
 			.and()
 			.formLogin(form -> form
