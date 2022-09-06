@@ -1,6 +1,6 @@
 # MVC-cube
 
-# Tecnologias utilizadas
+## Tecnologias utilizadas:
 
 - Java 17
 - HTML e CSS
