@@ -18,15 +18,14 @@
 		
 		<h1 class="my-4">Criação de Chamados</h1>
 
-		<form action="/submit" method="POST" enctype="multipart/form-data">
+		<form th:object="${chamadoDTO}" method="POST" enctype="multipart/form-data">
 			<div class="mb-3">
-				<label for="titulo" class="form-label">Título:</label> <input
-					type="text" class="form-control" id="titulo" name="titulo" required>
+				<label for="titulo" class="form-label">Título:</label> 
+				<input th:field="*{titulo}" type="text" class="form-control" id="titulo" name="titulo" required>
 			</div>
 			<div class="mb-3">
 				<label for="descricao" class="form-label">Descrição:</label>
-				<textarea class="form-control" id="descricao" name="descricao"
-					rows="4" required></textarea>
+				<textarea th:field="*{descricao}" class="form-control" id="descricao" name="descricao" rows="4" required></textarea>
 			</div>
 			<div class="mb-3">
 				<label for="imagem" class="form-label">Anexo de imagem:</label> <input
@@ -34,7 +33,7 @@
 					accept="image/*">
 			</div>
 			<div>
-				<input class="btn btn-primary" type="submit" value="Criar Chamado">
+				<button class="btn btn-primary" type="submit" value="Criar Chamado">Confirmar</button>
 			</div>
 		</form>
 	</div>
