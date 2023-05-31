@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,9 +22,23 @@ public class Chamado {
 	private String status;
 	private String tipoChamado;
 	
+	@ManyToOne
+	private Usuario usuario;
+	
 	public Chamado() {
 	}
 	
+	public Chamado(Long id, String titulo, String descricao, LocalDate dataAbertura, String status, String tipoChamado,
+			Usuario usuario) {
+		this.id = id;
+		this.titulo = titulo;
+		this.descricao = descricao;
+		this.dataAbertura = dataAbertura;
+		this.status = status;
+		this.tipoChamado = tipoChamado;
+		this.usuario = usuario;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -60,4 +75,11 @@ public class Chamado {
 	public void setTipoChamado(String tipoChamado) {
 		this.tipoChamado = tipoChamado;
 	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
 }

@@ -3,6 +3,7 @@ package br.com.metasix.mvcube.dto;
 import javax.validation.constraints.NotBlank;
 
 import br.com.metasix.mvcube.entity.Chamado;
+import br.com.metasix.mvcube.entity.Usuario;
 
 public class ChamadoDTO {
 
@@ -10,6 +11,8 @@ public class ChamadoDTO {
 	private String titulo;
 	@NotBlank
 	private String descricao;
+	
+	private Long idUsuario;
 
 	public String getTitulo() {
 		return titulo;
@@ -27,11 +30,19 @@ public class ChamadoDTO {
 		this.descricao = descricao;
 	}
 
-	
-	public Chamado toChamado() {
+	public Long getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Long idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public Chamado toChamado(Usuario usuario) {
 		Chamado chamado = new Chamado();
 		chamado.setTitulo(titulo);
 		chamado.setDescricao(descricao);
+		chamado.setUsuario(usuario);
 		return chamado;
 	}
 

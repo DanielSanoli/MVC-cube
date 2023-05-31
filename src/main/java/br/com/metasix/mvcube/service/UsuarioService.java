@@ -40,5 +40,9 @@ public class UsuarioService {
 
 		return updateUsuario;
 	}
+	
+	public Usuario findByUsername(String username) {
+        return usuarioRepository.findByUsername(username);
+    }
 
 }

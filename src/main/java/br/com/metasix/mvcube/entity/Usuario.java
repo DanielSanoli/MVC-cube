@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -33,11 +34,14 @@ public class Usuario {
 	@ManyToMany(fetch = FetchType.EAGER)
 	private List<Role> roles;
 	
+	@OneToMany
+	private Chamado chamado;
+	
 	public Usuario() {
 	}
 	
 	public Usuario(Long id, String nomeCompleto, String email, String senha, String cpf, String dataNascimento, String telefone,
-			String logradouro, String cidade, String uf, Integer numero, String complemento, String bairro, List<Role> roles) {
+			String logradouro, String cidade, String uf, Integer numero, String complemento, String bairro, List<Role> roles, Chamado chamado) {
 		this.id = id;
 		this.nomeCompleto = nomeCompleto;
 		this.email = email;
@@ -52,6 +56,7 @@ public class Usuario {
 		this.complemento = complemento;
 		this.bairro = bairro;
 		this.roles = roles;
+		this.chamado = chamado;
 	}
 
 	public Long getId() {
@@ -165,5 +170,12 @@ public class Usuario {
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
-	
+
+	public Chamado getChamado() {
+		return chamado;
+	}
+
+	public void setChamado(Chamado chamado) {
+		this.chamado = chamado;
+	}
 }
