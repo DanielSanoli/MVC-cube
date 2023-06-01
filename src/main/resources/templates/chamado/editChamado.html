@@ -1,0 +1,31 @@
+<!DOCTYOPE html>
+<html>
+	<head th:replace="~{fragment :: head}"></head>
+	<body>
+		<main>
+			<section class="container border border-2 mt-5">
+				<h2 class="mt-3">Edite o chamado</h2>
+				<form th:object="${chamado}" th:action="@{/chamado/editChamado/{id}(id = ${chamado.id})}" method="POST">
+					<div class="row">
+						<div class="mb-3">
+					    	<label for="titulo" class="form-label">Título</label>
+					    	<input th:field="*{titulo}" type="text" class="form-control">
+					  	</div>
+					  	<div class="mb-3">
+						    <label for="descricao" class="form-label">Descrição</label>
+						    <textarea th:field="*{descricao}" class="form-control" id="descricao" name="descricao" rows="4" required></textarea>
+				  		</div>
+				  		<div class="mb-3">
+							<label for="imagem" class="form-label">Anexo de imagem:</label> <input
+								class="form-control" type="file" id="imagem" name="imagem"
+								accept="image/*">
+						</div>
+						<div class="col-12 mt-3">
+						    <button type="submit" class="btn btn-primary">Salvar</button>
+						</div>
+					</div>
+				</form>
+			</section>
+		</main>	
+	</body>
+</html>

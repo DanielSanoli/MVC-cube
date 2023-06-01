@@ -29,7 +29,7 @@
                             <td th:text="${lista.titulo}"></td>
                             <td th:text="${lista.tipoChamado}"></td>
                             <td th:text="${lista.status}"></td>                      
-                            <td><a sec:authorize="hasRole('ADMIN')" th:href="@{editChamado/{chamadoId}(chamadoId = ${lista.id})}">Alterar</a></td>
+                            <td><a sec:authorize="hasRole('ADMIN')" th:href="@{chamadoEdit/{chamadoId}(chamadoId = ${lista.id})}">Alterar</a></td>
                         </tr>
                     </tbody>
                 </table>    
