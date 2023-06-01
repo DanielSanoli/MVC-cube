@@ -34,6 +34,8 @@ public class Chamado {
 	@CreatedDate
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataAbertura;
+	
+	@Enumerated(EnumType.STRING)
 	private StatusChamado status;
 	
 	@ManyToOne

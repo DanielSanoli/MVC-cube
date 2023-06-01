@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 
 import br.com.metasix.mvcube.entity.Chamado;
 import br.com.metasix.mvcube.entity.Usuario;
+import br.com.metasix.mvcube.enums.StatusChamado;
 import br.com.metasix.mvcube.enums.TipoChamado;
 
 public class ChamadoDTO {
@@ -15,6 +16,8 @@ public class ChamadoDTO {
 	private String descricao;
 	@NotNull
 	private TipoChamado tipoChamado;
+	
+	private StatusChamado statusChamado;
 	
 	private Long idUsuario;
 
@@ -49,6 +52,14 @@ public class ChamadoDTO {
 	public void setTipoChamado(TipoChamado tipoChamado) {
 		this.tipoChamado = tipoChamado;
 	}
+	
+	public StatusChamado getStatusChamado() {
+		return statusChamado;
+	}
+
+	public void setStatusChamado(StatusChamado statusChamado) {
+		this.statusChamado = statusChamado;
+	}
 
 	public Chamado toChamado(Usuario usuario) {
 		Chamado chamado = new Chamado();
@@ -56,6 +67,7 @@ public class ChamadoDTO {
 		chamado.setDescricao(descricao);
 		chamado.setUsuario(usuario);
 		chamado.setTipoChamado(tipoChamado);
+		chamado.setStatus(StatusChamado.ABERTO);
 		return chamado;
 	}
 
