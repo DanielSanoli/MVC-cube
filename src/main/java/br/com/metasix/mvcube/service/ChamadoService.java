@@ -19,4 +19,11 @@ public class ChamadoService {
 		
 	}
 	
+	public Chamado edit(Chamado chamado) {
+
+		Chamado updateChamado = chamadoRepository.save(chamado);
+
+		return updateChamado;
+	}
+	
 }
