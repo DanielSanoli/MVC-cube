@@ -35,13 +35,13 @@ public class Usuario {
 	private List<Role> roles;
 	
 	@OneToMany
-	private Chamado chamado;
+	private List<Chamado> chamado;
 	
 	public Usuario() {
 	}
 	
 	public Usuario(Long id, String nomeCompleto, String email, String senha, String cpf, String dataNascimento, String telefone,
-			String logradouro, String cidade, String uf, Integer numero, String complemento, String bairro, List<Role> roles, Chamado chamado) {
+			String logradouro, String cidade, String uf, Integer numero, String complemento, String bairro, List<Role> roles, List<Chamado> chamado) {
 		this.id = id;
 		this.nomeCompleto = nomeCompleto;
 		this.email = email;
@@ -171,11 +171,11 @@ public class Usuario {
 		this.roles = roles;
 	}
 
-	public Chamado getChamado() {
+	public List<Chamado> getChamado() {
 		return chamado;
 	}
 
-	public void setChamado(Chamado chamado) {
+	public void setChamado(List<Chamado> chamado) {
 		this.chamado = chamado;
 	}
 }

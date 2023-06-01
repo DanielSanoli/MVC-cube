@@ -23,6 +23,4 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 //	@Query("SELECT u FROM Usuario u WHERE u.nomeCompleto like ?1%")   
 //	List<Usuario> findByName(String nome);
 	
-	Usuario findByUsername(String username);
-	
 }

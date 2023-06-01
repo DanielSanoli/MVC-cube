@@ -1,16 +1,23 @@
 package br.com.metasix.mvcube.entity;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Table(name = "chamados")
+@EntityListeners(AuditingEntityListener.class)
 public class Chamado {
 
 	@Id
@@ -18,7 +25,10 @@ public class Chamado {
 	private Long id;
 	private String titulo;
 	private String descricao;
-	private LocalDate dataAbertura;
+	
+	@CreatedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dataAbertura;
 	private String status;
 	private String tipoChamado;
 	
@@ -28,7 +38,7 @@ public class Chamado {
 	public Chamado() {
 	}
 	
-	public Chamado(Long id, String titulo, String descricao, LocalDate dataAbertura, String status, String tipoChamado,
+	public Chamado(Long id, String titulo, String descricao, Date dataAbertura, String status, String tipoChamado,
 			Usuario usuario) {
 		this.id = id;
 		this.titulo = titulo;
@@ -57,10 +67,10 @@ public class Chamado {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public LocalDate getDataAbertura() {
+	public Date getDataAbertura() {
 		return dataAbertura;
 	}
-	public void setDataAbertura(LocalDate dataAbertura) {
+	public void setDataAbertura(Date dataAbertura) {
 		this.dataAbertura = dataAbertura;
 	}
 	public String getStatus() {

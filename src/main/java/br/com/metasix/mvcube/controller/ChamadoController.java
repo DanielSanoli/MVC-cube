@@ -35,7 +35,7 @@ public class ChamadoController {
 	}
 	
 	@PostMapping("/formChamado")
-	public String cadastroUsuario(@Valid ChamadoDTO chamadoDto,  BindingResult result) {
+	public String cadastroChamado(@Valid ChamadoDTO chamadoDto,  BindingResult result) {
 		
 		if(result.hasErrors()) {
 			return "usuario/cadastroUsuario";
