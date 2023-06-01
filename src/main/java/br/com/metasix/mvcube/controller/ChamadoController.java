@@ -13,9 +13,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import br.com.metasix.mvcube.dto.ChamadoDTO;
 import br.com.metasix.mvcube.entity.Chamado;
@@ -51,6 +53,16 @@ public class ChamadoController {
 		return mv;
 	}
 	
+	@GetMapping("/chamadoEdit/{id}")
+	public ModelAndView chamadoEdit(@PathVariable("id") Long id, Chamado chamado) {
+		Chamado cm = chamadoRepository.findById(id).get();
+		
+		ModelAndView mv = new ModelAndView("chamado/editChamado");
+		mv.addObject("chamado", cm);
+		mv.addObject("idChamado", id);
+		return mv;
+	}
+	
 	@PostMapping("/formChamado")
 	public String cadastroChamado(@Valid ChamadoDTO chamadoDto,  BindingResult result) {
 		
@@ -70,6 +82,18 @@ public class ChamadoController {
 		
 		return "home";
 	}
+	
+	@PostMapping("/editChamado/{id}")
+    public RedirectView editChamado(@PathVariable Long id, Chamado chamado) {
+        RedirectView redirectView = new RedirectView("/chamado/list");
+        
+        if (chamado != null) {
+            this.chamadoService.edit(chamado);
+            return redirectView;
+        } else {
+            return redirectView;
+        }
+    }
 	
 	public Usuario getUsuarioLogado() {
 	    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
