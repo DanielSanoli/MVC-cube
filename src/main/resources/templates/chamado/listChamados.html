@@ -25,7 +25,7 @@
                     <tbody>
                         <tr th:each = "lista:${list}">
                             <td th:text="${lista.id}"></td>
-                            <td th:text="${lista.usuario}"></td>
+                            <td th:text="${lista.usuario.nomeCompleto}"></td>
                             <td th:text="${lista.titulo}"></td>
                             <td th:text="${lista.tipoChamado}"></td>
                             <td th:text="${lista.status}"></td>                      
