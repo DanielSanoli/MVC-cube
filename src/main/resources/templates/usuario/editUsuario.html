@@ -4,6 +4,9 @@
 	<body>
 		<main>
 			<section class="container border border-2 mt-5">
+				<div class="col-12">
+        			<button type="button" class="btn btn-secondary mt-2 position-absolute start-0 ms-2" onclick="history.back()">Voltar</button>
+      			</div>
 				<h2 class="mt-3">Edite o usuário</h2>
 				<form th:object="${usuario}" th:action="@{/usuario/editUsuario/{id}(id = ${usuario.id})}" method="POST">
 					<div class="row">

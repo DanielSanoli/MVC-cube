@@ -1,0 +1,28 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E0F0FD;
+}
+.logo-container {
+    background-color: #343a40;
+    color: #FFF;
+    font-size: 1.2rem;
+}
+.logo {
+    font-family: 'Arial', cursive;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #FFF;
+}
+.logo:hover {
+    color: #ccc;
+}
+.footer {
+    background-color: #343a40;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
