@@ -9,3 +9,5 @@
 - Bootstrap 5
 - Hibernate
 - Thymeleaf
+
+Projeto ainda está incompleto.
