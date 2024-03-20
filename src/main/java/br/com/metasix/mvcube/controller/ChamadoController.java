@@ -80,7 +80,7 @@ public class ChamadoController {
 		Chamado chamado = chamadoDto.toChamado(usuario);
 		chamadoService.execute(chamado);
 		
-		return "home";
+		return "redirect:/home";
 	}
 	
 	@PostMapping("/editChamado/{id}")
