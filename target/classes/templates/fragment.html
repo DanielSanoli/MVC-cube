@@ -9,7 +9,7 @@
 
 
 <div th:fragment="logo" class="logo-container mb-3 p-3 d-flex justify-content-between align-items-center">
-    <span class="logo"><a href="/home">MVC-Cube</a></span>
+    <span class="logo"><a href="/home"><img src="/img/logo-mvc.png" alt="MVC-Cube Logo"></a></span>
     <nav>
         <a class="text-light mx-2" href="usuario/list">Usuários</a>
         <a sec:authorize="hasRole('ADMIN')" class="text-light mx-2" href="usuario/formUsuario">Cadastro</a>
