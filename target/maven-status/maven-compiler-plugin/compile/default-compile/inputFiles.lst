@@ -1,19 +1,21 @@
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/service/UsuarioService.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/LoginController.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/security/ImplementsUserDetailsService.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Chamado.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/service/ChamadoService.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/security/UsuarioDetails.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/repository/ChamadoRepository.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Usuario.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/dto/RoleDTO.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/service/RoleService.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/MvccubeApplication.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Role.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/UsuarioController.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/HomeController.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/dto/ChamadoDTO.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/security/SecurityConfiguration.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/ChamadoController.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/repository/UsuarioRepository.java
-/home/danielsanoli/Área de Trabalho/El/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/dto/RequisicaoNovoUsuario.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/ChamadoController.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/repository/ChamadoRepository.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/LoginController.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/dto/RequisicaoNovoUsuario.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/MvccubeApplication.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/security/SecurityConfiguration.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/repository/UsuarioRepository.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/dto/ChamadoDTO.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/security/UsuarioDetails.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Chamado.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/UsuarioController.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/service/UsuarioService.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/security/ImplementsUserDetailsService.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Role.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/enums/StatusChamado.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/entity/Usuario.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/service/RoleService.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/enums/TipoChamado.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/dto/RoleDTO.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/service/ChamadoService.java
+/home/danielsanoli/el/projetos/mvc-cube/src/main/java/br/com/metasix/mvcube/controller/HomeController.java
